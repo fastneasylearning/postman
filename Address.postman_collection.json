@@ -1,0 +1,169 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Address",
+		"_postman_id": "f27a148d-4ff5-1cf7-5bf7-b43f10fe311a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[GET] My Address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.lob.com/v1/addresses",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdF9jOGYyMWUyMWQ3NDhlOTBkODU4OTZmOGQ3MDVmNzk4ODk4YTo=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "https://api.lob.com/v1/addresses"
+			},
+			"response": []
+		},
+		{
+			"name": "[POST] Create Address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.lob.com/v1/addresses",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdF9jOGYyMWUyMWQ3NDhlOTBkODU4OTZmOGQ3MDVmNzk4ODk4YTo=",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n  \r\n  \"description\": \"HE HE HE\",\r\n  \"name\": \"HE HE\",\r\n  \"company\": \"LOB\",\r\n  \"phone\": \"5555555555\",\r\n  \"email\": \"marrymae@lob.com\",\r\n  \"address_line1\": \"1601 SW Stagecoach Rd\",\r\n  \"address_line2\": \"\",\r\n  \"address_city\": \"China Town\",\r\n  \"address_state\": \"AR\",\r\n  \"address_zip\": \"94107-1741\",\r\n  \"address_country\": \"US\",\r\n  \"metadata\": {}\r\n}\r\n"
+				},
+				"description": "https://api.lob.com/v1/addresses"
+			},
+			"response": []
+		},
+		{
+			"name": "[GET] Retrieve Single Address by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": {
+					"raw": "https://maps.googleapis.com/maps/api/place/textsearch/json?query=restaurent in Mumbai&key=AIzaSyCqQFAe9kxuG7knYJc49RnJsA8cjpudYMM",
+					"protocol": "https",
+					"host": [
+						"maps",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"maps",
+						"api",
+						"place",
+						"textsearch",
+						"json"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "restaurent in Mumbai",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "key",
+							"value": "AIzaSyCqQFAe9kxuG7knYJc49RnJsA8cjpudYMM",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdF9jOGYyMWUyMWQ3NDhlOTBkODU4OTZmOGQ3MDVmNzk4ODk4YTo=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "https://api.lob.com/v1/addresses/{id}"
+			},
+			"response": []
+		},
+		{
+			"name": "[DELETE] Delete Single Address by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.lob.com/v1/addresses/adr_f58af078a66c53ce",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic dGVzdF9jOGYyMWUyMWQ3NDhlOTBkODU4OTZmOGQ3MDVmNzk4ODk4YTo=",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "https://api.lob.com/v1/addresses/{id}"
+			},
+			"response": []
+		}
+	]
+}

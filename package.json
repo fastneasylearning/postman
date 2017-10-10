@@ -1,0 +1,14 @@
+{
+  "name": "postman",
+  "version": "1.0.0",
+  "description": "postman collection in jenkins",
+
+  "scripts": {
+    "test": "newman run Address.postman_collection.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^3.8.3"
+  }
+}
