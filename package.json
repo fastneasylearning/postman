@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "newman": "^3.8.3"
+    "newman": "^3.5.2"
   }
 }
