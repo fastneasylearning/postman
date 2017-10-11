@@ -4,7 +4,7 @@
   "description": "postman collection in jenkins",
 
   "scripts": {
-    "test": "newman run Address.postman_collection.json --reporters cli,junit --reporter-junit-export newman.xml"
+    "test": "newman run Address.postman_collection.json --reporters cli,html --reporter-html-export newman.xml"
   },
   "author": "",
   "license": "ISC",
